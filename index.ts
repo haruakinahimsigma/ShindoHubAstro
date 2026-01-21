@@ -1,8 +1,11 @@
 import { execSync } from "node:child_process";
+import { EventEmitter } from "node:events";
 import fs from "node:fs";
 import { createServer } from "node:http";
 import type { Socket } from "node:net";
 import path from "node:path";
+
+EventEmitter.defaultMaxListeners = 20;
 import fastifyMiddie from "@fastify/middie";
 import fastifyStatic from "@fastify/static";
 // @ts-expect-error
@@ -20,7 +23,7 @@ async function Start() {
       await Main({ enabled: true });
     }
 
-    console.log("Interstellar's not built yet! Building now...");
+    console.log("Project Astro's not built yet! Building now...");
 
     await build({}).catch((err) => {
       console.error("Build failed:", err);
