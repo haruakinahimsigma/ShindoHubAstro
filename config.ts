@@ -3,8 +3,8 @@ import type { Config } from "@/types/config";
 const config: Config = {
   // Server Configuration
   server: {
-    port: 8080, // The port on which Interstellar runs (Default: 8080)
-    obfuscate: true, // Set to false to disable obfuscation
+    port: 5000, // The port on which Interstellar runs (Default: 8080)
+    obfuscate: false, // Set to false to disable obfuscation
     compress: true, // Set to false to disable compression
   },
 
