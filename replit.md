@@ -1,7 +1,7 @@
-# Interstellar
+# Project Astro
 
 ## Overview
-Interstellar is a web proxy application built with Astro, React, and Fastify. It allows users to browse the web through a proxy service with features like tab cloaking and customizable settings.
+Project Astro is a web proxy application built with Astro, React, and Fastify. It allows users to browse the web through a proxy service with features like tab cloaking and customizable settings.
 
 ## Project Architecture
 - **Framework**: Astro v5 with React components
