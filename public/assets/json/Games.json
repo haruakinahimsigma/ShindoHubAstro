@@ -14,13 +14,13 @@
   {
     "name": "Tic Tac Toe",
     "link": "https://playtictactoe.org/",
-    "image": "/assets/media/icons/Tic-Tac-Toe.webp",
+    "image": "https://playtictactoe.org/img/ttt.png",
     "categories": ["all", "2P"]
   },
   {
     "name": "Bob the Robber 2",
     "link": "https://www.silvergames.com/en/bob-the-robber-2/iframe",
-    "image": "/assets/media/icons/Bob-The-Robber-2.webp",
+    "image": "https://img.cdn.famobi.com/portal/html5games/images/tmp/BobTheRobber2Teaser.jpg",
     "categories": ["all"]
   },
   {
