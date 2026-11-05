@@ -16,6 +16,15 @@ import INConfig from "./config";
 
 const integrations = [react(), tailwind({ applyBaseStyles: false })];
 
+const commitDate = (() => {
+  try {
+    return execSync("git show --no-patch --format=%ci").toString().trim();
+  } catch {
+    // Railway's Docker build context may not include the .git directory.
+    return process.env.RAILWAY_GIT_COMMIT_TIMESTAMP ?? new Date().toISOString();
+  }
+})();
+
 if (INConfig.server?.compress !== false) {
   integrations.push(
     compress({
@@ -57,7 +66,7 @@ export default defineConfig({
   vite: {
     logLevel: "warn", 
     define: {
-      __COMMIT_DATE__: JSON.stringify(execSync("git show --no-patch --format=%ci").toString().trim()),
+      __COMMIT_DATE__: JSON.stringify(commitDate),
     },
     resolve: {
       alias: {
